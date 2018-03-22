@@ -1,0 +1,26 @@
+{
+  "name": "game_of_life",
+  "version": "0.1.0",
+  "homepage": "https://jimmayvv.github.io/game_of_life",
+  "private": true,
+  "dependencies": {
+    "gh-pages": "^1.1.0",
+    "node-sass-chokidar": "^1.1.2",
+    "npm-run-all": "^4.1.2",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-scripts": "1.1.1"
+  },
+  "scripts": {
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d build",
+    "build-css": "node-sass-chokidar src/ -o src/",
+    "watch-css": "yarn build-css && node-sass-chokidar src/ -o src/ --watch --recursive",
+    "start-js": "react-scripts start",
+    "start": "npm-run-all -p watch-css start-js",
+    "build-js": "react-scripts build",
+    "build": "npm-run-all build-css build-js",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}

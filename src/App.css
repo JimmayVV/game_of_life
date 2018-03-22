@@ -1,0 +1,41 @@
+body {
+  text-align: center;
+  margin: 5%;
+  background: #206BA4; }
+
+.wrapper {
+  width: 100%;
+  display: block; }
+
+.wrapper-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center; }
+
+.rules, .commands {
+  border: 1px solid #006;
+  width: 20%;
+  background: #BBD9EE; }
+
+.grid {
+  display: table;
+  border-collapse: collapse;
+  margin: 0 10px; }
+
+.grid-row {
+  display: table-row; }
+
+.grid-item {
+  display: table-cell;
+  border: 1px solid #000;
+  box-sizing: border-box;
+  width: 13px;
+  height: 13px;
+  background: #BBD9EE; }
+
+.grid-item.active {
+  background: #206BA4; }
+
+.grid-item.big {
+  width: 20px;
+  height: 20px; }
