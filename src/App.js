@@ -162,15 +162,26 @@ class App extends Component {
         <h2>Game of Life - Round: {this.state.round}</h2>
         <div className="wrapper-row">
           <div className="rules">
-            Rules
+            <h3>Rules</h3>
+            <p>As described on <a href='https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life'>Wikipedia</a>, the Game of Life
+            is a zero player game, who's progression is entirely dependent on the inital state of the game. The user can pre-select
+            which cells within the provided grid start as alive (dark blue) or dead (gray). If a user does not wish to manually
+            populate the grid, there is a seed button which will randomly fill the board to approximately 25% capacity</p>
+            <p>The game advances in rounds. Each cell in each round has the follow rules applied to it:</p>
+            <ol>
+              <li>Any live cell with fewer than two live neighbours dies, as if caused by underpopulation.</li>
+              <li>Any live cell with two or three live neighbours lives on to the next generation.</li>
+              <li>Any live cell with more than three live neighbours dies, as if by overpopulation.</li>
+              <li>Any dead cell with exactly three live neighbours becomes a live cell, as if by reproduction.</li>
+            </ol>
           </div>
           <GameGrid grid={this.state.grid} toggleCell={this.toggleCell} />
           <div className="commands">
             <h3>Commands</h3>
-            <button onClick={this.resetGame}>Reset</button>
-            <button onClick={this.seedGame} disabled={!(this.state.round === 0 && this.state.paused)}>Seed</button>
-            <button onClick={this.toggleGame}>{this.state.paused ? 'Start' : 'Pause'}</button>
-            <button onClick={this.advanceRound} disabled={!this.state.paused}>Next</button>
+            <button className="gray inverted" onClick={this.resetGame}>Reset</button>
+            <button className="gray inverted" onClick={this.seedGame} disabled={!(this.state.round === 0 && this.state.paused)}>Seed</button>
+            <button className="gray inverted" onClick={this.toggleGame}>{this.state.paused ? 'Start' : 'Pause'}</button>
+            <button className="gray inverted" onClick={this.advanceRound} disabled={!this.state.paused}>Next</button>
           </div>
         </div>
       </div>

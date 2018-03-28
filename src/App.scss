@@ -1,3 +1,6 @@
+$gray: #E7E7E7;
+
+
 body {
   text-align: center;
   margin: 5%;
@@ -19,6 +22,48 @@ body {
   border: 1px solid #006;
   width: 20%;
   background: #BBD9EE;
+  font-size: 0.9em;
+  padding: 1%;
+}
+
+.rules :not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
+  text-align: left;
+}
+
+.rules ol {
+  font-weight: bold;
+}
+
+button {
+  text-align: center;
+  display: block;
+  width: 100%;
+  font-size: 0.9rem;
+  margin: 2px;
+  padding: 7px 10px;
+  border-radius: 4px;
+  transition-duration: 0.3s;
+  box-sizing: border-box;
+  border: 2px solid rgba(0,0,0,0);
+}
+
+button.gray {
+  color: black;
+  background-color: $gray;
+}
+
+button.gray.inverted {
+  background-color: inherit;
+  border: 2px solid $gray;
+  color: black;
+
+  &:hover:not(:disabled) {
+    background-color: $gray;
+  }
+
+  &:disabled {
+    color: gray;
+  }
 }
 
 .grid {

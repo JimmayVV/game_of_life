@@ -15,7 +15,40 @@ body {
 .rules, .commands {
   border: 1px solid #006;
   width: 20%;
-  background: #BBD9EE; }
+  background: #BBD9EE;
+  font-size: 0.9em;
+  padding: 1%; }
+
+.rules :not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
+  text-align: left; }
+
+.rules ol {
+  font-weight: bold; }
+
+button {
+  text-align: center;
+  display: block;
+  width: 100%;
+  font-size: 0.9rem;
+  margin: 2px;
+  padding: 7px 10px;
+  border-radius: 4px;
+  transition-duration: 0.3s;
+  box-sizing: border-box;
+  border: 2px solid transparent; }
+
+button.gray {
+  color: black;
+  background-color: #E7E7E7; }
+
+button.gray.inverted {
+  background-color: inherit;
+  border: 2px solid #E7E7E7;
+  color: black; }
+  button.gray.inverted:hover:not(:disabled) {
+    background-color: #E7E7E7; }
+  button.gray.inverted:disabled {
+    color: gray; }
 
 .grid {
   display: table;
